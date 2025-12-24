@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   motion,
   useMotionValue,
@@ -6,6 +7,9 @@ import {
 } from "framer-motion";
 import { GridScan } from './GridScan';
 
+=======
+import { motion } from "framer-motion";
+>>>>>>> a740731f348fff2d9f0966e9fc3415f061ffe595
 
 interface ProfileCardProps {
   name: string;
@@ -24,6 +28,7 @@ const ProfileCard = ({
   width = "250px",
   borderRadius = "2rem",
 }: ProfileCardProps) => {
+<<<<<<< HEAD
   const mouseX = useMotionValue(125);
   const mouseY = useMotionValue(200);
 
@@ -51,10 +56,17 @@ const ProfileCard = ({
     <motion.div
       whileHover={{ scale: 1.05 }}
       className="relative overflow-hidden shadow-2xl"
+=======
+  return (
+    <motion.div
+      whileHover={{ scale: 1.03 }}
+      className="relative overflow-hidden shadow-xl"
+>>>>>>> a740731f348fff2d9f0966e9fc3415f061ffe595
       style={{
         height,
         width,
         borderRadius,
+<<<<<<< HEAD
         perspective: "1400px",
       }}
     >
@@ -110,10 +122,19 @@ const ProfileCard = ({
       {/* 🖼 IMAGE */}
       <motion.div
         className="absolute inset-0 z-[2] bg-cover bg-center pointer-events-none"
+=======
+        perspective: "1000px",
+      }}
+    >
+      {/* Background Image */}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center"
+>>>>>>> a740731f348fff2d9f0966e9fc3415f061ffe595
         style={{
           backgroundImage: `url(${imageSrc})`,
           borderRadius,
         }}
+<<<<<<< HEAD
         whileHover={{ scale: 1.18 }}
         transition={{ duration: 0.5 }}
       />
@@ -140,6 +161,26 @@ const ProfileCard = ({
         className="absolute inset-0 z-[10]"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
+=======
+        whileHover={{ scale: 1.05 }}
+      />
+
+      {/* Overlay Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent rounded-[inherit]" />
+
+      {/* Text overlay */}
+      <div className="absolute bottom-6 left-6 text-white">
+        <h3 className="text-2xl md:text-3xl font-bold">
+          {name} <span className="block">{surname}</span>
+        </h3>
+      </div>
+
+      {/* Optional hover effect */}
+      <motion.div
+        className="absolute inset-0 rounded-[inherit]"
+        whileHover={{ rotateX: 3, rotateY: 3 }}
+        style={{ pointerEvents: "none" }}
+>>>>>>> a740731f348fff2d9f0966e9fc3415f061ffe595
       />
     </motion.div>
   );

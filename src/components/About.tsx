@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import ProfileCard from "./ui/ProfileCard"; // import tvoje ProfileCard komponente
+<<<<<<< HEAD
 import myPhoto from "../assets/maksim.png"; // stavi putanju do tvoje slike
+=======
+import myPhoto from "../assets/maksim.jpg"; // stavi putanju do tvoje slike
+>>>>>>> a740731f348fff2d9f0966e9fc3415f061ffe595
 
 const About = () => {
   return (
